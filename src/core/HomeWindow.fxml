@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="195.0" layoutY="-7.0" prefHeight="514.0" prefWidth="612.0" style="-fx-background-color: #eeeeff;" />
+      <AnchorPane layoutX="-7.0" layoutY="-7.0" prefHeight="514.0" prefWidth="202.0" style="-fx-background-color: #999999;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="63.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Location" />
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="112.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Template" />
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="161.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Project" />
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="210.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Developers" />
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="259.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Contributions" />
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="308.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="License" />
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="357.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Miscellaneous" />
+            <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="406.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Finish" />
+            <AnchorPane layoutX="7.0" prefHeight="514.0" prefWidth="50.0" style="-fx-background-color: #606060;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

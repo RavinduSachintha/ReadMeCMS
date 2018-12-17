@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("HomeWindow.fxml"));
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("CoreWindow.fxml"));
         primaryStage.setTitle("ReadMeCMS");
         primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.setResizable(false);

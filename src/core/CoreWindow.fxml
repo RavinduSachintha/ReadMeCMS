@@ -5,23 +5,57 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.CoreController">
-    <AnchorPane layoutX="195.0" layoutY="-7.0" prefHeight="514.0" prefWidth="612.0" style="-fx-background-color: #eeeeff;">
-        <Pane fx:id="panTemplate" layoutY="7.0" prefHeight="507.0" prefWidth="614.0" style="-fx-background-color: red;" />
-        <Pane fx:id="panLocation" layoutY="7.0" prefHeight="507.0" prefWidth="614.0" style="-fx-background-color: blue;" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="core.CoreController">
+    <AnchorPane layoutX="195.0" layoutY="-7.0" prefHeight="514.0" prefWidth="612.0"
+                style="-fx-background-color: #eeeeff;">
+        <Pane fx:id="panDevelopers" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #ff0000;"/>
+        <Pane fx:id="panTemplate" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #008800;"/>
+        <Pane fx:id="panProject" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #000088;"/>
+        <Pane fx:id="panContributions" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #00ff00;"/>
+        <Pane fx:id="panLicense" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #0000ff;"/>
+        <Pane fx:id="panMiscellaneous" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #888800;"/>
+        <Pane fx:id="panFinish" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #008888;"/>
+        <Pane fx:id="panLocation" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
+              style="-fx-background-color: #880000;"/>
     </AnchorPane>
-    <AnchorPane layoutX="-7.0" layoutY="-7.0" prefHeight="514.0" prefWidth="202.0" style="-fx-background-color: #999999;">
+    <AnchorPane layoutX="-7.0" layoutY="-7.0" prefHeight="514.0" prefWidth="202.0"
+                style="-fx-background-color: #999999;">
         <effect>
-            <DropShadow />
+            <DropShadow/>
         </effect>
-        <Button fx:id="btnNavLocation" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Location" />
-        <Button fx:id="btnNavTemplate" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Template" />
-        <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="161.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Project" />
-        <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="210.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Developers" />
-        <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="259.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Contributions" />
-        <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="308.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="License" />
-        <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="357.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Miscellaneous" />
-        <Button alignment="BASELINE_LEFT" layoutX="57.0" layoutY="406.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css" text="Finish" />
-        <AnchorPane layoutX="7.0" prefHeight="514.0" prefWidth="50.0" style="-fx-background-color: #606060;" />
+        <Button fx:id="btnNavLocation" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="63.0" mnemonicParsing="false"
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
+                text="Location"/>
+        <Button fx:id="btnNavTemplate" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="112.0" mnemonicParsing="false"
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
+                text="Template"/>
+        <Button fx:id="btnNavProject" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="161.0" mnemonicParsing="false"
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
+                text="Project"/>
+        <Button fx:id="btnNavDevelopers" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="210.0"
+                mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/styles.css" text="Developers"/>
+        <Button fx:id="btnNavContributions" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="259.0"
+                mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/styles.css" text="Contributions"/>
+        <Button fx:id="btnNavLicense" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="308.0" mnemonicParsing="false"
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
+                text="License"/>
+        <Button fx:id="btnNavMiscellaneous" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="357.0"
+                mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/styles.css" text="Miscellaneous"/>
+        <Button fx:id="btnNavFinish" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="406.0" mnemonicParsing="false"
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
+                text="Finish"/>
+        <AnchorPane layoutX="7.0" prefHeight="514.0" prefWidth="50.0" style="-fx-background-color: #606060;"/>
     </AnchorPane>
 </AnchorPane>

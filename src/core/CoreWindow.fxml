@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
             prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1"
@@ -24,8 +27,35 @@
               style="-fx-background-color: #888800;"/>
         <Pane fx:id="panFinish" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
               style="-fx-background-color: #008888;"/>
-        <Pane fx:id="panLocation" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0"
-              style="-fx-background-color: #880000;"/>
+        <Pane fx:id="panLocation" layoutX="1.0" layoutY="7.0" prefHeight="507.0" prefWidth="614.0">
+            <ComboBox fx:id="cmbFileLocation" layoutX="93.0" layoutY="151.0" prefHeight="26.0" prefWidth="428.0"/>
+            <Label layoutX="93.0" layoutY="117.0" prefHeight="26.0" prefWidth="239.0" text="Current File Location">
+                <font>
+                    <Font name="System Bold" size="15.0"/>
+                </font>
+            </Label>
+            <Button fx:id="btnSetNewLocation" defaultButton="true" layoutX="293.0" layoutY="197.0"
+                    mnemonicParsing="false" onAction="#handleSetNewLocationButtonAction" prefHeight="33.0"
+                    prefWidth="228.0" text="Set a New Location" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Button>
+            <ComboBox fx:id="cmbFileName" layoutX="93.0" layoutY="329.0" prefHeight="26.0" prefWidth="428.0"/>
+            <Label layoutX="93.0" layoutY="295.0" prefHeight="26.0" prefWidth="239.0" text="File Name">
+                <font>
+                    <Font name="System Bold" size="15.0"/>
+                </font>
+            </Label>
+            <Button fx:id="btnSaveLocationPane" layoutX="293.0" layoutY="418.0" mnemonicParsing="false"
+                    onAction="#handleSetNewLocationButtonAction" prefHeight="26.0" prefWidth="228.0"
+                    styleClass="stage-pass-button" stylesheets="@../css/styles.css" text="Save &amp; Next Stage"
+                    textFill="WHITE">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Button>
+        </Pane>
     </AnchorPane>
     <AnchorPane layoutX="-7.0" layoutY="-7.0" prefHeight="514.0" prefWidth="202.0"
                 style="-fx-background-color: #999999;">
@@ -33,29 +63,29 @@
             <DropShadow/>
         </effect>
         <Button fx:id="btnNavLocation" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="63.0" mnemonicParsing="false"
-                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
-                text="Location"/>
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/navigation-styles.css" text="Location"/>
         <Button fx:id="btnNavTemplate" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="112.0" mnemonicParsing="false"
-                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
-                text="Template"/>
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/navigation-styles.css" text="Template"/>
         <Button fx:id="btnNavProject" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="161.0" mnemonicParsing="false"
-                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
-                text="Project"/>
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/navigation-styles.css" text="Project"/>
         <Button fx:id="btnNavDevelopers" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="210.0"
                 mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
-                stylesheets="@../css/styles.css" text="Developers"/>
+                stylesheets="@../css/navigation-styles.css" text="Developers"/>
         <Button fx:id="btnNavContributions" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="259.0"
                 mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
-                stylesheets="@../css/styles.css" text="Contributions"/>
+                stylesheets="@../css/navigation-styles.css" text="Contributions"/>
         <Button fx:id="btnNavLicense" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="308.0" mnemonicParsing="false"
-                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
-                text="License"/>
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/navigation-styles.css" text="License"/>
         <Button fx:id="btnNavMiscellaneous" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="357.0"
                 mnemonicParsing="false" onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
-                stylesheets="@../css/styles.css" text="Miscellaneous"/>
+                stylesheets="@../css/navigation-styles.css" text="Miscellaneous"/>
         <Button fx:id="btnNavFinish" alignment="BASELINE_LEFT" layoutX="57.0" layoutY="406.0" mnemonicParsing="false"
-                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0" stylesheets="@../css/styles.css"
-                text="Finish"/>
+                onAction="#handleNavButtonAction" prefHeight="49.0" prefWidth="146.0"
+                stylesheets="@../css/navigation-styles.css" text="Finish"/>
         <AnchorPane layoutX="7.0" prefHeight="514.0" prefWidth="50.0" style="-fx-background-color: #606060;"/>
     </AnchorPane>
 </AnchorPane>

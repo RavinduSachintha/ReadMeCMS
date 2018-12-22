@@ -1,19 +1,14 @@
-.button{
-    -fx-border-color: transparent;
+
+.stage-pass-button {
     -fx-border-width: 0;
-    -fx-background-radius: 0;
-    -fx-background-color: transparent;
-    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 14px; /* 12 */
+    -fx-background-radius: 5;
+    -fx-background-color: #1b1b1b;
 }
 
-.button:focused {
-    -fx-border-style: none;
-    -fx-background-color: #505050;
-    -fx-text-fill: white;
+.stage-pass-button:hover {
+    -fx-background-color: #444444;
 }
 
-.button:hover {
-    -fx-background-color: #aaaaaa;
-    -fx-text-fill: white;
+.stage-pass-button:pressed {
+    -fx-background-color: #1b1b1b;
 }

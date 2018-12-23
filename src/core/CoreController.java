@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class CoreController {
 
@@ -49,7 +50,7 @@ public class CoreController {
 
     /* Declarations related to location pane */
     @FXML
-    private ComboBox cmbFileLocation;
+    private ComboBox<String> cmbFileLocation;
     @FXML
     private Button btnSetNewLocation;
     @FXML
@@ -57,10 +58,19 @@ public class CoreController {
     @FXML
     private Button btnSaveLocationPane;
 
+    private ArrayList<String> recentLocations;
+
 
     /*
      * Functions' definitions related to Main Window and all Panes
      */
+
+    public CoreController() {
+        recentLocations = new ArrayList<>();
+        recentLocations.add("Location 01");
+        recentLocations.add("Location 02");
+        recentLocations.add("Location 03");
+    }
 
     /* FXML file initializing function */
     public void initialize() {
@@ -100,7 +110,7 @@ public class CoreController {
     /* Initialize file location choice box values */
     private void initializeFileLocations() {
         // Add the recent location list
-        cmbFileLocation.getItems().addAll("Location 01", "Location 02", "Location 03");
+        cmbFileLocation.getItems().addAll(recentLocations);
 
         // Set the default location
         cmbFileLocation.getSelectionModel().selectFirst();
@@ -113,8 +123,13 @@ public class CoreController {
 
         if (selectedDirectory == null) {
             //No Directory selected
+            System.out.println("No Directory selected");
         } else {
-            System.out.println(selectedDirectory.getAbsolutePath());
+
+            /* TODO : when new location add to the recentLocations list combobox should be automatically updated */
+            recentLocations.add(selectedDirectory.getAbsolutePath());
+            cmbFileLocation.getItems().add(selectedDirectory.getAbsolutePath());
+            cmbFileLocation.getSelectionModel().selectLast();
         }
 
 
